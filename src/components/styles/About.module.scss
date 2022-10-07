@@ -1,0 +1,15 @@
+.about {
+    background-image: url('../../images/8401.jpg');
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: 95% 70%;
+
+    .intro__container {
+        height: 100%;
+
+        .intro__hi {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 4rem;
+        }
+    }
+}
