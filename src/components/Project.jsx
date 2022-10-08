@@ -6,7 +6,7 @@ import '../index.css'
 
 const Project = () => {
     return (
-        <section className={`section ${classes.project}`}>
+        <section id='project__section' className={`section_box ${classes.project}`}>
             Project Section
         </section>
     )

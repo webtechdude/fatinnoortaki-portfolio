@@ -7,7 +7,7 @@ import '../index.css'
 
 const Skills = () => {
     return (
-        <section className={`section ${classes.skills}`}>
+        <section id='skills__section' className={`section_box ${classes.skills}`}>
             Skills Section
         </section>
     )

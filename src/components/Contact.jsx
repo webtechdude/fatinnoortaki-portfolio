@@ -6,7 +6,7 @@ import classes from './styles/Contact.module.scss'
 
 const Contact = () => {
     return (
-        <section className={`section ${classes.contact}`}>
+        <section id='contact__section' className={`section_box ${classes.contact}`}>
             Contact Section
         </section>
     )

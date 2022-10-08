@@ -1,22 +1,20 @@
 @use '../../index.css';
 
 header.nav__container {
-    height: 100%;
-    min-width: 10%;
-
     // @media (max-width: 800px) {
+
     // }
     nav.nav {
-        padding: 0;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
         position: fixed;
         top: 0;
         left: 0;
         bottom: 50%;
         z-index: 999;
         transition: all 0.5s;
-        padding: 1rem;
         background-color: var(--nav-bg);
         backdrop-filter: blur(6px);
+
         height: 100%;
 
         // overflow-y: auto;
@@ -38,9 +36,8 @@ header.nav__container {
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             animation: textclip 8s linear infinite;
-            display: inline-block;
-            // font-family: 'Bebas Neue', cursive;
-            // font-family: 'Share Tech Mono', monospace;
+            display: block;
+            padding: 10px 5px;
             font-family: 'Silkscreen', cursive;
 
             @keyframes textclip {
@@ -51,31 +48,37 @@ header.nav__container {
         }
 
         ul.nav__list {
-            transform: translateY(50%);
+            display: block;
+            transform: translateY(30%);
             transition: all 0.5s;
             list-style: none;
-            display: flex;
-            flex-flow: column nowrap;
-            justify-content: center;
-            gap: 2rem;
 
             li.nav__item {
+                cursor: pointer;
+                // display: block;
+                text-align: center;
+                padding: 20px 0;
                 font-size: 1.5rem;
+                overflow: hidden;
+
+
                 // transition: all 0.3s ease-in-out;
-                transform: translateX(30%);
 
                 a {
+                    padding: 15px 10px;
                     text-decoration: none;
                     color: var(--text-yellow);
                     overflow: hidden;
                     transition: all 0.3s ease;
                     position: relative;
+
+
                 }
 
                 .hiddenText {
                     position: absolute;
                     top: 50%;
-                    transform: translate(30%, -60%);
+                    transform: translate(20%, -60%);
                     display: none;
                     font-size: 1rem;
                     font-family: 'Share Tech Mono', monospace;
@@ -84,11 +87,12 @@ header.nav__container {
                 }
 
                 &:hover {
-
                     a {
-                        margin-left: -10px;
+                        padding: 15px 10px 15px 0;
+                        margin-left: -3rem;
                         color: blueviolet;
-                        font-size: 90%;
+
+
 
                         .hiddenText {
                             display: inline;

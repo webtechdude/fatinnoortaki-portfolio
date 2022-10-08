@@ -4,15 +4,15 @@ import classes from "./styles/Navbar.module.scss"
 
 const Navbar = () => {
     return (
-        <header className={classes.nav__container}>
+        <header className={`sidebar ${classes.nav__container}`}>
             <nav className={classes.nav}>
                 <a className={classes.nav__brand} href="/">Taki</a>
                 <ul className={classes.nav__list}>
-                    <li className={classes.nav__item}><a href="#here"><FaHome /><span className={classes.hiddenText}>Home</span></a></li>
-                    <li className={classes.nav__item}><a href="#about"><FaRegUser /><span className={classes.hiddenText}>About</span></a></li>
-                    <li className={classes.nav__item}><a href="#project"><FaChartArea /><span className={classes.hiddenText}>Project</span></a></li>
-                    <li className={classes.nav__item}><a href="#skills"><FaBrain /><span className={classes.hiddenText}>Skills</span></a></li>
-                    <li className={classes.nav__item}><a href="#contact"><FaEnvelope /><span className={classes.hiddenText}>Contact</span></a></li>
+                    <li onClick={() => { window.location = "#home__section" }} className={classes.nav__item}><a href="#home__section"><FaHome /><span className={classes.hiddenText}>Home</span></a></li>
+                    <li onClick={() => { window.location = "#about__section" }} className={classes.nav__item}><a href="#about__section"><FaRegUser /><span className={classes.hiddenText}>About</span></a></li>
+                    <li onClick={() => { window.location = "#project__section" }} className={classes.nav__item}><a href="#project__section"><FaChartArea /><span className={classes.hiddenText}>Project</span></a></li>
+                    <li onClick={() => { window.location = "#skills__section" }} className={classes.nav__item}><a href="#skills__section"><FaBrain /><span className={classes.hiddenText}>Skills</span></a></li>
+                    <li onClick={() => { window.location = "#contact__section" }} className={classes.nav__item}><a href="#contact__section"><FaEnvelope /><span className={classes.hiddenText}>Contact</span></a></li>
                 </ul>
             </nav>
         </header >

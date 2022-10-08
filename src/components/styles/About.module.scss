@@ -1,15 +1,42 @@
 .about {
-    background-image: url('../../images/8401.jpg');
-    background-size: 50%;
-    background-repeat: no-repeat;
-    background-position: 95% 70%;
+    padding-top: 3rem;
 
-    .intro__container {
-        height: 100%;
+    .about__heading {
+        font-family: 'Bebas Neue', cursive;
+        font-size: 3.5rem;
+    }
 
-        .intro__hi {
-            font-family: 'Bebas Neue', cursive;
-            font-size: 4rem;
+    .about__me {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        padding: 2rem 0.5rem 2rem 3rem;
+        font-family: 'Share Tech Mono', monospace;
+
+        .about__me_text {
+            .about__me_name {
+                margin-bottom: 2rem;
+                font-size: 1.6rem;
+            }
+
+            .about__me_desc {
+                font-size: 1.2rem;
+                line-height: 2rem;
+            }
+        }
+
+        .about__me_img {
+            margin-right: 2rem;
+            clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
+            width: 40%;
+            height: auto;
+
+            img {
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+            }
         }
     }
 }

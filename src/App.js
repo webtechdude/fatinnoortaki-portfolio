@@ -7,7 +7,7 @@ import './index.css'
 
 const App = () => {
   return (
-    <main>
+    <main id="main">
       <Navbar />
       <Contentcontainer />
     </main>
