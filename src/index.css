@@ -2,7 +2,9 @@
   --bg: hsl(204 100% 5%);
   --bg-secondary: #0C1325;
   --nav-bg: rgba(0, 21, 36, 0.219);
+  --nav-hover:  #050c1a;
   --text: rgb(255, 247, 233);
+  --focus-bg: rgba(0, 0, 0, 0.4);
   /* --text-yellow: rgb(255, 255, 0); */
   --text-yellow: #FFC83D;
   --text-pink: #ff1361;
@@ -16,9 +18,23 @@
   scroll-behavior: smooth;
 }
 
-html {
-  scroll-snap-type: y mandatory;
+/*.is-current {
+  background-color: var(--nav-hover);
+  box-shadow: rgba(50, 50, 93, 0.5) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}*/
+/*.is-current {transition: all 1s ease;}*/
+.is-current a  {
+  color: blueviolet !important;
+  /*filter: saturate(50%);*/
+  font-size: 2rem;
+  /*transform: scale(1.1);*/
 }
+
+/*Putting span to its intial size even when hovering and in is-current*/
+.is-current span {
+  font-size: initial !important;
+}
+
 
 body {
   margin: 0;
@@ -46,12 +62,6 @@ code {
 
 }
 
-
-.sidebar {}
-
-.content_box {
-  scroll-snap-type: y mandatory;
-}
 
 .section_box {
   min-height: 100vh;
@@ -229,5 +239,17 @@ font-family: 'Silkscreen', cursive;
 
 .section__heading {
   font-family: 'Bebas Neue', cursive;
+  display: inline-block;
   font-size: 3.5rem;
+  position: relative;
+}
+
+.section__heading::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 0.5px;
+  width: 100%;
+  background-color: var(--text-pink);
 }

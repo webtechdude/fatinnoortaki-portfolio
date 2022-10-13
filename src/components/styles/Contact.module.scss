@@ -2,4 +2,108 @@
     padding: 0;
     display: block;
 
+    .contact__text {
+        font-family: 'Raleway', sans-serif;
+        font-size: 2rem;
+        margin: 2rem 0;
+    }
+
+    .contact__container {
+        margin-inline: auto;
+        width: 90%;
+        display: flex;
+        flex-flow: row wrap;
+        // justify-content: center;
+        gap: 2rem;
+        align-items: center;
+
+        .contact__item {
+            flex: 2;
+
+            .contact__info {
+                .contact__info_box {
+                    height: 200px;
+                    width: 200px;
+                    font-size: 3rem;
+                    display: flex;
+                    flex-flow: column nowrap;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 2rem;
+                    border: 0.5px solid var(--nav-bg);
+                    border-radius: 5px;
+                    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                    margin-bottom: 1rem;
+                    background: rgba(0, 0, 0, 0.4);
+                    transition: all 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+                    cursor: pointer;
+                    overflow: hidden;
+
+                    span {
+                        transform: translateX(200px);
+                        visibility: hidden;
+                        margin-top: 5px;
+                        font-size: 1rem;
+                        font-family: 'Share Tech Mono', monospace;
+                        transition: all 0.4s ease-in;
+                    }
+
+                    &:hover {
+                        box-shadow: rgba(0, 0, 0, 0.507) 0px 20px 30px -10px;
+
+                        span {
+                            visibility: visible;
+                            transform: translateX(0);
+                        }
+                    }
+                }
+            }
+        }
+
+        form {
+            font-family: 'Share Tech Mono', monospace;
+            flex: 3;
+            display: flex;
+            flex-flow: column nowrap;
+            border: 1px solid var(--bg);
+            padding: 2.2rem 1.5rem;
+            border-radius: 1rem;
+            backdrop-filter: blur(8px);
+            transition: background 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+            &:focus-within {
+                background: var(--focus-bg);
+            }
+
+            label {
+                margin: 1.5rem 0 5px;
+
+                font-size: 1.2rem;
+            }
+
+            textarea {
+                resize: vertical;
+            }
+
+
+            input[type="text"],
+            input[type="email"],
+            textarea {
+                border: 0;
+                padding: 5px;
+                font-size: 1.1rem;
+                background: var(--focus-bg);
+                color: var(--text);
+            }
+
+
+            .submitBtn {
+                max-width: 40%;
+                margin-top: 1rem;
+                font-family: 'Share Tech Mono', monospace;
+            }
+
+
+        }
+    }
 }
