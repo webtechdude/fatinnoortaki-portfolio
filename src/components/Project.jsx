@@ -7,20 +7,53 @@ import { ProjectArr } from './ProjectArr'
 
 
 
+const FilterBtn = ({ type, onClick }) => {
+    return (
+        <button onClick={onClick} className={classes.button_filter}>{type}</button>
+    )
+}
+
+
 const Project = () => {
     const [project, setProject] = useState([])
     const [moreBtn, setMoreBtn] = useState(<BsChevronDown />)
-    const [isSet, setIsSet] = useState(false)
+    const [isUp, setIsUp] = useState(false)
+    const [filterType, setFilterType] = useState([])
+
+
+
+    const filterClick = async (language) => {
+        setMoreBtn(<BsChevronUp />)
+        const clickedFiltered = ProjectArr.filter(({ lang }) => {
+            return lang.includes(language);
+        })
+        if (language === "all") {
+            setProject(ProjectArr)
+            setIsUp(true)
+        }
+        else {
+            setProject(clickedFiltered)
+            setIsUp(true)
+        }
+    }
 
     useEffect(() => {
+        const storeType = ProjectArr.map(({ lang }) => [...lang])
+        setFilterType(["all", ...new Set(storeType.flat(Infinity))])
         const initialLoad = ProjectArr.slice(0, 3)
         setProject(initialLoad)
-
     }, [])
 
     return (
         <section id='project__section' className={`section_box ${classes.project}`}>
             <h1 className='section__heading'>My Projects</h1>
+            <div className={classes.project__filter}>
+                {
+                    filterType.map(language => {
+                        return <FilterBtn onClick={() => filterClick(language)} type={language} />
+                    })
+                }
+            </div>
             <div className={classes.project__box}>
                 {
                     project.map(({ id, name, description, imgUrl, lang, repoUrl, url }) => {
@@ -31,22 +64,20 @@ const Project = () => {
                     })
                 }
             </div>
-            <a href="javascript:void(0)" className={classes.moreBtn} onClick={async () => {
-                setProject(ProjectArr)
-                setMoreBtn(<BsChevronUp />)
-                setIsSet(true)
-                if (isSet) {
+            <button className={classes.moreBtn} onClick={async () => {
+                if (isUp) {
                     setMoreBtn(<BsChevronDown />);
-                    setProject(ProjectArr.slice(0, 3))
-                    setIsSet(false)
+                    setProject((project) => project.slice(0, 3))
+                    setIsUp(false)
                 } else {
                     setProject(ProjectArr)
                     setMoreBtn(<BsChevronUp />)
+                    setProject(ProjectArr)
+                    setIsUp(true)
                 }
-
             }}>
                 {moreBtn}
-            </a>
+            </button>
         </section >
     )
 

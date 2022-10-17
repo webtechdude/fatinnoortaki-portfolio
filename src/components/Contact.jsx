@@ -50,9 +50,8 @@ const Contact = () => {
                     <input id='email' required type="email" name="user_email" />
                     <label htmlFor="message">Message</label>
                     <textarea id='message' required name="message" rows="8" />
-                    <button disabled={isLoading} type='submit' className={`button-82-pushable ${classes.submitBtn}`}>
-                        <span className="button-82-shadow"></span><span className="button-82-edge"></span>
-                        <span className="button-82-front text">Send Email</span>
+                    <button disabled={isLoading} type='submit' className={`${classes.submitBtn}`}>
+                        Send Email
                     </button>
                 </form>
             </div>

@@ -9,8 +9,11 @@
         padding: 1rem;
         font-family: 'Share Tech Mono', monospace;
 
-        .about__me_box {
+        @media screen and (max-width: 601px) {
+            flex-flow: row wrap-reverse;
+        }
 
+        .about__me_box {
             // backdrop-filter: blur(8px);
             box-shadow: rgba(0, 0, 0, 0.5) 0px 3px 8px;
             border: 0.5px solid rgba(0, 0, 0, 0.5);
@@ -77,6 +80,10 @@
                 transition: all 0.3s cubic-bezier(0.55, 0.085, 0.68, 0.53);
                 padding: 2rem 3rem;
 
+                @media screen and (max-width: 601px) {
+                    padding: 1rem;
+                }
+
                 .about__me_name {
                     margin-bottom: 2rem;
                     font-size: 1.5rem;
@@ -85,12 +92,24 @@
                 .about__me_desc {
                     font-size: 1.1rem;
                     line-height: 2rem;
+
+                    @media screen and (max-width: 601px) {
+                        line-height: 1.5rem;
+                        font-size: 1rem;
+                    }
                 }
             }
         }
 
         .about__me_img {
             margin-right: 2rem;
+
+            @media screen and (max-width: 601px) {
+                margin-right: 0;
+                width: 60%;
+                clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+            }
+
             clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
             width: 45%;
             height: auto;

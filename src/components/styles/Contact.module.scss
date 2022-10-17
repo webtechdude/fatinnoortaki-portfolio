@@ -6,6 +6,10 @@
         font-family: 'Raleway', sans-serif;
         font-size: 2rem;
         margin: 2rem 0;
+
+        @media screen and (max-width: 601px) {
+            font-size: 1.6rem;
+        }
     }
 
     .contact__container {
@@ -13,14 +17,24 @@
         width: 90%;
         display: flex;
         flex-flow: row wrap;
-        // justify-content: center;
         gap: 2rem;
         align-items: center;
+
+        @media screen and (max-width: 601px) {
+            width: 100%;
+        }
 
         .contact__item {
             flex: 2;
 
             .contact__info {
+                @media screen and (max-width: 601px) {
+                    display: flex;
+                    gap: 1rem;
+                    justify-content: center;
+
+                }
+
                 .contact__info_box {
                     height: 200px;
                     width: 200px;
@@ -39,6 +53,12 @@
                     cursor: pointer;
                     overflow: hidden;
 
+                    @media screen and (max-width: 601px) {
+                        height: 150px;
+                        width: 150px;
+                        font-size: 2.5rem;
+                    }
+
                     span {
                         transform: translateX(200px);
                         visibility: hidden;
@@ -46,6 +66,12 @@
                         font-size: 1rem;
                         font-family: 'Share Tech Mono', monospace;
                         transition: all 0.4s ease-in;
+
+                        @media screen and (max-width: 601px) {
+                            text-align: center;
+                            transform: translateX(0);
+                            visibility: visible;
+                        }
                     }
 
                     &:hover {
@@ -71,8 +97,12 @@
             backdrop-filter: blur(8px);
             transition: background 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 
+            @media screen and (max-width: 601px) {
+                margin-inline: 1rem;
+            }
+
             &:focus-within {
-                background: var(--focus-bg);
+                background: var(--focus-form-bg);
             }
 
             label {
@@ -90,17 +120,31 @@
             input[type="email"],
             textarea {
                 border: 0;
-                padding: 5px;
-                font-size: 1.1rem;
+                outline: none;
+                padding: 8px;
+                font-size: 1rem;
                 background: var(--focus-bg);
                 color: var(--text);
+                font-family: 'Raleway', sans-serif;
+
+                &:focus {
+                    border: 0.5px solid var(--input-border);
+                }
             }
 
 
             .submitBtn {
-                max-width: 40%;
+                color: var(--text);
+                padding: 0.5rem;
+                font-size: 1.2rem;
+                background: var(--input-border);
+                border: none;
                 margin-top: 1rem;
                 font-family: 'Share Tech Mono', monospace;
+
+                &:hover {
+                    filter: grayscale(0.4);
+                }
             }
 
 
