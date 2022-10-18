@@ -19,7 +19,7 @@ const About = () => {
     return (
         <section id='about__section' className={`section_box ${classes.about}`}>
             <h1 className="section__heading">About me</h1>
-            <p className={classes.about__me}>
+            <div className={classes.about__me}>
                 <div className={classes.about__me_box}>
                     <div className={classes.about__me_heading}><span onClick={() => {
                         setProfileSrc(profile1)
@@ -57,7 +57,7 @@ const About = () => {
 
                 </div>
 
-            </p >
+            </div >
 
 
 

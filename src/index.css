@@ -62,6 +62,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background: var(--bg-gradient);
   color: var(--text);
+  cursor: url('./images/pointer.cur'), auto !important;
   position: relative;
 }
 

@@ -7,12 +7,6 @@ import { ProjectArr } from './ProjectArr'
 
 
 
-const FilterBtn = ({ type, onClick }) => {
-    return (
-        <button onClick={onClick} className={classes.button_filter}>{type}</button>
-    )
-}
-
 
 const Project = () => {
     const [project, setProject] = useState([])
@@ -49,8 +43,8 @@ const Project = () => {
             <h1 className='section__heading'>My Projects</h1>
             <div className={classes.project__filter}>
                 {
-                    filterType.map(language => {
-                        return <FilterBtn onClick={() => filterClick(language)} type={language} />
+                    filterType.map((language, index) => {
+                        return <button key={index} onClick={() => filterClick(language)} className={classes.button_filter}>{language}</button>
                     })
                 }
             </div>

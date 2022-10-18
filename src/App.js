@@ -16,7 +16,6 @@ const App = () => {
 
   const themeToggler = () => {
     setIsLight(value => !value)
-
     document.body.classList.toggle('light')
   }
   useEffect(() => {
