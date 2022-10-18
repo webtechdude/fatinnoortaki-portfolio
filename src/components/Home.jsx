@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from 'react'
 import classes from './styles/Home.module.scss';
 
 import Typewriter from 'typewriter-effect';
@@ -7,7 +6,7 @@ import '../index.css'
 
 
 
-const Home = ({ isDarkModeEnabled, themeToggler }) => {
+const Home = () => {
 
     return (
         <section id='home__section' className={`section_box ${classes.home}`}>

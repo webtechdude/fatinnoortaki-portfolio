@@ -7,10 +7,10 @@ import Skills from './Skills'
 import Footer from './Footer'
 import "../index.css"
 
-const Contentcontainer = ({ isDarkModeEnabled, themeToggler }) => {
+const Contentcontainer = () => {
     return (
         <section>
-            <Home isDarkModeEnabled={isDarkModeEnabled} themeToggler={themeToggler} />
+            <Home />
             <About />
             <Project />
             <Skills />
