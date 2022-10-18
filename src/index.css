@@ -11,6 +11,26 @@
   --text-yellow: #FFC83D;
   --text-pink: #ff1361;
   --input-border: #6366f1;
+  /* Project Hover */
+  --project-hover: rgba(0, 0, 0, 0.718) 0px 20px 30px -10px;
+  --project-hover-overlay: linear-gradient(90deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.9) 100%);
+}
+
+.light {
+  --bg-gradient: linear-gradient(159deg, rgb(168, 211, 240) 0%, rgb(129, 147, 194) 45%, rgb(146, 157, 186) 90%);
+  --bg: #eef4f8;
+  --bg-secondary: #00123f;
+  --nav-bg: rgba(106, 193, 255, 0.219);
+  --nav-hover: #050c1a;
+  --text: rgb(24, 24, 24);
+  --focus-bg: rgba(235, 235, 250, 0.6);
+  --focus-form-bg: rgba(8, 8, 8, 0.3);
+  /* --text-yellow: rgb(255, 255, 0); */
+  --text-yellow: #e1a100;
+  --text-pink: #ff1361;
+  --input-border: #6366f1;
+  --project-hover: rgba(0, 0, 0, 0.718) 0px 20px 30px -10px;
+  --project-hover-overlay: linear-gradient(90deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.7) 100%);
 }
 
 
@@ -21,9 +41,10 @@
   scroll-behavior: smooth;
 }
 
+/* Navbar ScrollSpy */
 .is-current a {
   color: blueviolet !important;
-  font-size: 2rem;
+  /* font-size: 2rem; */
 }
 
 /*Putting span to its intial size even when hovering and in is-current*/
@@ -42,7 +63,45 @@ body {
   background: var(--bg-gradient);
   color: var(--text);
   position: relative;
-  /* font-size: min(200%, 5vmin); */
+}
+
+/* Theme toggle Button */
+.themeToggler {
+  z-index: 99;
+  position: sticky;
+  top: 15%;
+  left: 95%;
+
+  /* Styling */
+  background: var(--focus-bg);
+  color: var(--text);
+  border: 0.3px solid var(--bg-secondary);
+  padding: 0.5rem;
+  font-size: 1.3rem;
+  border-radius: 5px;
+  transition: transform 0.1s ease-in,
+}
+
+.themeToggler:hover::after {
+  position: absolute;
+  font-size: 0.9rem;
+  min-width: 300%;
+  background: var(--focus-bg);
+  text-align: center;
+  vertical-align: middle;
+  height: 100%;
+  top: -3rem;
+  left: -3rem;
+  content: attr(data-convert);
+  font-family: 'Silkscreen', cursive;
+}
+
+.themeToggler:hover {
+  transform: scale(1.05);
+}
+
+.themeToggler:active {
+  transform: scale(0.95);
 }
 
 code {
@@ -63,10 +122,10 @@ code {
 }
 
 
-.content_box {
+.section_box {
   min-height: 100vh;
   width: 100%;
-  padding: 3rem 1rem 0rem;
+  padding: 3rem 1rem 0 !important;
 }
 
 

@@ -29,6 +29,10 @@
                 padding: 0.3rem 0.2rem;
                 border-bottom: 0.3px solid rgba(0, 0, 0, 0.5);
 
+                @media screen and (max-width: 601px) {
+                    font-size: 1.3rem;
+                }
+
                 span {
                     padding: 8px;
                     position: relative;

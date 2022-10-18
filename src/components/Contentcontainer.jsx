@@ -4,17 +4,18 @@ import About from './About'
 import Contact from './Contact'
 import Project from './Project'
 import Skills from './Skills'
-import classes from './styles/Contentcontainer.module.scss';
+import Footer from './Footer'
 import "../index.css"
 
-const Contentcontainer = () => {
+const Contentcontainer = ({ isDarkModeEnabled, themeToggler }) => {
     return (
-        <section className={`content_box ${classes.content_container}`}>
-            <Home />
+        <section>
+            <Home isDarkModeEnabled={isDarkModeEnabled} themeToggler={themeToggler} />
             <About />
             <Project />
             <Skills />
             <Contact />
+            <Footer />
         </section>
     )
 }

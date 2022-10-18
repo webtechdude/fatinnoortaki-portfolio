@@ -1,0 +1,42 @@
+.footer {
+    @media screen and (min-width: 601px) {
+        border-start-start-radius: 60px;
+    }
+
+    margin-top: 5rem;
+    background: var(--bg);
+    margin-left: 0;
+    width: 100%;
+    padding: 2rem 3rem;
+
+    display: flex;
+    justify-content: space-between;
+
+    .copyright {
+        font-family: 'Silkscreen', cursive;
+        text-align: right;
+    }
+
+    .social_section {
+        .social_links {
+            margin-inline: 0.5rem;
+            font-size: 1.5rem;
+
+            &:nth-of-type(1) {
+                color: #3b5998;
+            }
+
+            &:nth-of-type(2) {
+                color: red;
+            }
+
+            &:nth-of-type(3) {
+                color: #551a8b;
+            }
+
+            &:nth-of-type(4) {
+                color: var(--text);
+            }
+        }
+    }
+}

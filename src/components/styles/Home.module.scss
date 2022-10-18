@@ -3,6 +3,7 @@
     background-size: 50%;
     background-repeat: no-repeat;
     background-position: 95% 70%;
+    position: relative;
 
     @media screen and (max-width: 601px) {
         background-size: contain;
@@ -22,10 +23,25 @@
 
 
     .intro__container {
+
         padding: 3rem 1rem;
 
         @media screen and (max-width: 601px) {
             padding: 2rem 0.5rem;
+        }
+
+        animation: onLoadShow 1s;
+
+        @keyframes onLoadShow {
+            from {
+                opacity: 0;
+                translate: 0 -10px;
+            }
+
+            to {
+                opacity: 1;
+                translate: 0 0;
+            }
         }
 
 
@@ -107,11 +123,11 @@
                 @media screen and (max-width: 601px) {
                     font-size: 1.8rem;
                     font-weight: bold;
-                    -webkit-text-stroke-width: 0.5px;
-                    -webkit-text-stroke-color: #0000008d;
+                    -webkit-text-stroke-width: 0.3px;
+                    -webkit-text-stroke-color: var(--input-border);
                 }
 
-                text-shadow: 0 0 5px rgba(12, 19, 37, 0.4);
+                text-shadow: 0 0 1px var(--input-border);
                 font-size: 2.5rem;
                 color: var(--text-yellow);
             }

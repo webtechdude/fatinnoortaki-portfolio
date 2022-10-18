@@ -46,14 +46,15 @@
                     padding: 2rem;
                     border: 0.5px solid var(--nav-bg);
                     border-radius: 5px;
-                    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                    box-shadow: var(--focus-bg) 0px 3px 8px;
                     margin-bottom: 1rem;
-                    background: rgba(0, 0, 0, 0.4);
+                    background-color: var(--focus-bg);
                     transition: all 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
                     cursor: pointer;
                     overflow: hidden;
 
                     @media screen and (max-width: 601px) {
+                        background-color: var(--focus-form-bg);
                         height: 150px;
                         width: 150px;
                         font-size: 2.5rem;
@@ -75,7 +76,8 @@
                     }
 
                     &:hover {
-                        box-shadow: rgba(0, 0, 0, 0.507) 0px 20px 30px -10px;
+                        background-color: var(--focus-form-bg);
+                        box-shadow: rgba(0, 0, 0, 0.5) 0px 20px 30px -10px;
 
                         span {
                             visibility: visible;
