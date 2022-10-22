@@ -1,6 +1,7 @@
-# Getting Started with Create React App
+# My First Ever React Portfolio
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![](src/images/sss.jpeg)
 
 ## Available Scripts
 
