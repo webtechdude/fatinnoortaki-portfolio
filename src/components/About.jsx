@@ -48,7 +48,12 @@ const About = () => {
                         <div className={classes.about__me_desc}>
                             Talking about me, I got into coding initially due to my extracurricular activities and fell into love with it
                             <br />
-                            I am currently a high-school student. After studying my school subjects for a while, I get back to learn coding and watch <BsYoutube /> tutorials about programming and stuff...
+                            Besides I am a high-school graduate from a
+small city in Bangladesh, usually
+engage in social activities and
+explores different skills to broaden my
+experiences and understanding of the
+world around :)
                         </div>
                     </div>
                 </div >
