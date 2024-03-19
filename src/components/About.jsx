@@ -46,14 +46,9 @@ const About = () => {
                     <div className={classes.about__me_text} style={colorMenu}>
                         <p className={classes.about__me_name}>My name is <span style={{ color: "rgb(255, 255, 0)" }}>Fatin Noor Taki</span></p>
                         <div className={classes.about__me_desc}>
-                            Talking about me, I got into coding initially due to my extracurricular activities and fell into love with it
+"Speaking about myself, I initially got into coding through my extracurricular activities and fell in love with it."
                             <br />
-                            Besides I am a high-school graduate from a
-small city in Bangladesh, usually
-engage in social activities and
-explores different skills to broaden my
-experiences and understanding of the
-world around :)
+"Besides being a high-school graduate from a small city in Bangladesh, I usually engage in social activities and explore different skills to broaden my experiences and understanding of the world around me :)"
                         </div>
                     </div>
                 </div >
