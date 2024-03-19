@@ -7,9 +7,6 @@ import profile1 from "../images/myImg1.png"
 import profile2 from "../images/myImg2.jpg"
 import profile3 from "../images/myImg3.jpg"
 
-import { BsYoutube } from "react-icons/bs";
-
-
 const About = () => {
     const [profileSrc, setProfileSrc] = useState(profile1)
     const [colorMenu, setColorMenu] = useState({
