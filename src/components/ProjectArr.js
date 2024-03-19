@@ -66,4 +66,13 @@ export const ProjectArr = [
         repoUrl: "https://technologypark.netlify.app/",
         url: "https://technologypark.netlify.app/"
     },
+    {
+        id: 9,
+        name: "MoonTube",
+        description: "Really simple YouTube homepage clone created for my friend's project",
+        lang: ["html", "css", "js", "scss"],
+        imgUrl: "./project_img/9.jpg",
+        repoUrl: "https://github.com/webtechdude/MoonTube",
+        url: "https://webtechdude.github.io/MoonTube/"
+    },
 ]
