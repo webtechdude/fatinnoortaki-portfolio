@@ -22,7 +22,7 @@ const Home = () => {
 
                     }}
                 /></span></h3>
-                <button onClick={() => window.open('https://drive.google.com/uc?export=download&id=1-v4Quko4_Op86wuLok9pBz9Op6ufcDRy')} className={`button-82-pushable ${classes.cvBtn}`}>
+                <button onClick={() => window.open('https://drive.google.com/drive/folders/1x0oQBe4uyNeR4mNGNnTF87fZIaCrP0q3?usp=drive_link')} className={`button-82-pushable ${classes.cvBtn}`}>
                     <span className="button-82-shadow"></span><span className="button-82-edge"></span>
                     <span className="button-82-front text">Download CV</span>
                 </button>
