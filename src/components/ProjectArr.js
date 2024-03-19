@@ -1,6 +1,6 @@
 export const ProjectArr = [
     {
-        id: 1,
+        id: 5,
         name: "Calculator App",
         description: "Modern Looking Calculator App made using Vanilla Javascript",
         lang: ["html", "css", "js"],
@@ -32,7 +32,7 @@ export const ProjectArr = [
         repoUrl: "https://github.com/webtechdude/Fatin-Noor-Taki---Profile-Links",
         url: "https://social-taki.netlify.app/"
     }, {
-        id: 5,
+        id: 7,
         name: "React Counter App with Dark Theme Toggler",
         description: "My First Simple React App",
         lang: ["scss", "react"],
@@ -42,14 +42,14 @@ export const ProjectArr = [
     }, {
         id: 6,
         name: "Superhero Gallery",
-        description: "Filterable Gallery Simple",
+        description: "Connected to API where you can search and know more about your superhero",
         lang: ["html", "css", "js"],
         imgUrl: "./project_img/6.png",
         repoUrl: "https://cheery-choux-bda1b1.netlify.app/",
         url: "https://cheery-choux-bda1b1.netlify.app/"
     },
     {
-        id: 7,
+        id: 1,
         name: "FitX Final Version v2",
         description: "Final Version of FitX with PHP",
         lang: ["html", "css", "scss", "php", "mysql"],
