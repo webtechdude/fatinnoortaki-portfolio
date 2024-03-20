@@ -45,7 +45,7 @@ const About = () => {
                         <div className={classes.about__me_desc}>
 "Speaking about myself, I initially got into coding through my extracurricular activities and fell in love with it."
                             <br />
-"Besides being a high-school graduate from a small city in Bangladesh, I usually engage in social activities and explore different skills to broaden my experiences and understanding of the world around me :)"
+"Besides being a high-school graduate from a small city in Bangladesh,I enjoy joining social events and trying out new skills to get to learn more about the world around me :)"
                         </div>
                     </div>
                 </div >
